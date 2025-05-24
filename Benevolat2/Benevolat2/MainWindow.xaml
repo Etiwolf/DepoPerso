@@ -1,0 +1,41 @@
+﻿<Window x:Class="Aristopattes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aristopattes"
+        xmlns:viewModel="clr-namespace:Aristopattes.Viewmodels"
+        d:DataContext="{d:DesignInstance Type=viewModel:AristopattesVM}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WebBrowser x:Name="webBrowser" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" />
+        <TextBox x:Name="Prenom" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="120" VerticalContentAlignment="Center"
+                 PreviewTextInput="PrenomAndNomTextInput" Text="{Binding Prenom}"></TextBox>
+        <TextBox x:Name="Nom" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="120" VerticalContentAlignment="Center" 
+                 PreviewTextInput="PrenomAndNomTextInput" Text="{Binding Nom}"></TextBox>
+        <TextBox x:Name="Telephone" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="120" VerticalContentAlignment="Center" MaxLength="12"
+                   PreviewTextInput="TelephoneTextInput"
+                   PreviewKeyDown="TelephoneKeyDown"
+                   TextChanged="TelephoneTextChanged" Text="{Binding Telephone}"></TextBox>
+        <TextBox x:Name="Courriel" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="120" VerticalContentAlignment="Center" Text="{Binding Courriel}"></TextBox>
+        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">Prénom de la personne :</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">nom de la personne :</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">Numéro de téléphone :</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">Adresse de courriel :</TextBlock>
+        <TextBlock x:Name="Message" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Height="27" FontWeight="ExtraBold" Text="{Binding Message}"></TextBlock>
+        <Button Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Height="60" Command="{Binding AjouterClient}" IsEnabled="true">Ajout de la personne (en construction)</Button>
+    </Grid>
+</Window>
