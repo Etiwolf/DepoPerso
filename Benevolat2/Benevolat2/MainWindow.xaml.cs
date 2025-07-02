@@ -29,9 +29,18 @@ namespace Aristopattes
 
             if (DataContext is AristopattesVM vm)
             {
-                string htmlPath = GenererPageHtml(vm.Clients);
-                webBrowser.Navigate(new Uri(htmlPath));
                 vm.DemanderDisparitionMessage += LancerAnimationDisparition;
+                vm.PropertyChanged += (s, args) =>
+                {
+                    if (args.PropertyName == nameof(vm.HtmlFilePath))
+                    {
+                        webBrowser.Navigate(new Uri(vm.HtmlFilePath));
+                    }
+                };
+                if (!string.IsNullOrWhiteSpace(vm.HtmlFilePath))
+                {
+                    webBrowser.Navigate(new Uri(vm.HtmlFilePath));
+                }
             }
         }
         private void LancerAnimationDisparition()
@@ -44,47 +53,6 @@ namespace Aristopattes
             };
 
             Message.BeginAnimation(UIElement.OpacityProperty, fadeOut);
-        }
-
-        private string GenererPageHtml(ObservableCollection<Client> clients)
-        {
-            string tempFilePath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "clients.html");
-
-            string html = @"<!DOCTYPE html>
-                            <html>
-                            <head>
-                                <meta charset='utf-8'>
-                                <title>Liste des clients</title>
-                                <style>
-                                    table { border-collapse: collapse; width: 100%; }
-                                    th, td { border: 1px solid black; padding: 8px; }
-                                    th { background-color: #f2f2f2; }
-                                </style>
-                            </head>
-                            <body>
-                                <h2>Liste des clients</h2>
-                                <table>
-                                    <tr><th>Prenom</th><th>Nom</th><th>Email</th><th>Téléphone</th><th>Numéro</th></tr>";
-                                        if (clients.Count > 0)
-                                        {
-                                            foreach (var client in clients)
-                                            {
-                                                html += $"<tr><td>{client.Prenom}</td><td>{client.Nom}</td><td>{client.Courriel}</td><td>{client.Telephone}</td><td>{client.Numero}</td></tr>";
-                                            }
-                                        }
-                                        else
-                                        {
-                                            html += " <tr><td colspan='5'> La liste des clients est actuellement vide</td></tr>";
-                                        }
-
-
-                                        html += @"
-                                </table>
-                            </body>
-                            </html>";
-
-            File.WriteAllText(tempFilePath, html);
-            return tempFilePath;
         }
 
         private void TelephoneTextInput(object sender, TextCompositionEventArgs e)

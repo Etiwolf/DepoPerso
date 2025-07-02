@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\Aristopattes.csproj": {}
+    "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\Aristopattes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\Aristopattes.csproj": {
+    "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\Aristopattes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
+        "projectUniqueName": "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
         "projectName": "Aristopattes",
-        "projectPath": "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
+        "projectPath": "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
         "packagesPath": "C:\\Users\\Etienne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\obj\\",
+        "outputPath": "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -18,6 +18,21 @@ namespace Aristopattes.Context
     {
         public DbSet<Client> Clients { get; set; }
 
+        private IConfigurationRoot configuration;
+
+        public AristopattesContext()
+        {
+            configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+        }
+
+        public string GetSetting(string key)
+        {
+            return configuration[key];
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -44,6 +59,10 @@ namespace Aristopattes.Context
             };
             Clients.Add(client);
             SaveChanges();
+        }
+        public List<Client> LireClients()
+        {
+            return Clients.ToList(); // ← ou DbSet<Client>.ToList() selon ton ORM (EF ?)
         }
     }
 }

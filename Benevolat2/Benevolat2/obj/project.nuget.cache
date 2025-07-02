@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mq7aziiveOMQyfJAD28BJ4TU3CcDMwb/0AF3VPOe40NKbz6JmVmpDGwpmQ5ZA10tWP2gYuq7AIaxM4MNTL0oEw==",
+  "dgSpecHash": "uG3izf8xiUfkW0ds5XoIrDr50odT/OTETQz5389yw0x29etRWeMUWDsc/7l4V359UVJvjguht/meAbYTVIu8Hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Etienne\\source\\repos\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
+  "projectFilePath": "C:\\Users\\Etienne\\OneDrive - Cégep de Chicoutimi\\Bureau\\Aristopattes\\DepoPerso\\Benevolat2\\Benevolat2\\Aristopattes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Etienne\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\Etienne\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
