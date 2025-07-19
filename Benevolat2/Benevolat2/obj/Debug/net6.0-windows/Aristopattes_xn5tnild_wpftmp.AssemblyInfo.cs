@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aristopattes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a8e668287bd82b4a0fdce5c2bc13c0a6ff02ebd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aristopattes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aristopattes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

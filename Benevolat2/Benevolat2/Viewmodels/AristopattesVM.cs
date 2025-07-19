@@ -151,6 +151,11 @@ namespace Aristopattes.Viewmodels
                 
                 EnvoiCourrielAuClient(nouveauClient);
                 HtmlFilePath = GenererPageHtml(Clients);
+
+                Prenom = "";
+                Nom = "";
+                Courriel = "";
+                Telephone = "";
             }
         }
         public int verifNumero(int numero, Random random)
